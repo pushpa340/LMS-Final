@@ -19,7 +19,7 @@ class Categories(models.Model):
         
     
 class Author(models.Model):
-    author_profile = models.ImageField(upload_to="Media/author")
+    author_profile = models.ImageField(upload_to="media/author")
     name = models.CharField(max_length=100, null=True)
     about_author = models.TextField()
 
@@ -45,7 +45,7 @@ class Course(models.Model):
     )
     created_at = models.DateTimeField(default=timezone.now)
 
-    featured_image = models.ImageField(upload_to="Media/featured_img",null=True)
+    featured_image = models.ImageField(upload_to="media/featured_img",null=True)
     featured_video = models.CharField(max_length=300,null=True)
 
     title = models.CharField(max_length=500)
@@ -116,7 +116,7 @@ class Lesson(models.Model):
 
 class Video(models.Model):
     srial_number = models.IntegerField(null=True)
-    thumbnail = models.ImageField(upload_to="Media/Yt_Thumbnail", null=True)
+    thumbnail = models.ImageField(upload_to="media/Yt_Thumbnail", null=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)

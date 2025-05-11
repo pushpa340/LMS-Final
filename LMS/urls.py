@@ -61,5 +61,14 @@ urlpatterns = [
     
     path('course/watch-course/<slug:slug>', views.WATCH_COURSE,name='watch_course'),
 
+
+#    path('', views.home, name='home'),
+    path('apply/', views.career_apply, name='career_apply'),
+
 ] + static(settings.MEDIA_URL,document_root =settings.MEDIA_ROOT)
-urlpatterns +=staticfiles_urlpatterns()
+#urlpatterns +=staticfiles_urlpatterns()
+# rlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+#if settings.DEBUG:
+#    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

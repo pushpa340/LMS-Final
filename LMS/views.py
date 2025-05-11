@@ -297,5 +297,25 @@ def WATCH_COURSE(request, slug):
     }
     return render(request,'course/watch-course.html',context)
 
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
+def career_apply(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        position = request.POST.get('position')
+        location = request.POST.get('location')
+        message = request.POST.get('message')
+        
+        # Here you could save to the database or send an email
+        print(f"Application received from {name} for {position}")
+        
+        messages.success(request, 'Application submitted successfully!')
+        return redirect('home')
+    return redirect('home')
+
+
+
 def custom_csrf_failure_view(request,reason=""):
     return HttpResponseForbidden("Custom CSRF validation failed. Please try again.")

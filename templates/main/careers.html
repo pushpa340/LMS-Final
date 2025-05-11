@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Careers{% endblock %}
+{% block content %}
+{% load static %}
+
+<section id="career" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Careers at seekhocoding</h2>
+    <p class="text-center mb-4">Join our dynamic team and grow your career in data analytics, development, and innovation.</p>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Data Analyst Intern</h5>
+            <p class="card-text">Location: Remote<br>Duration: 3 months</p>
+            <a href="#apply" class="btn btn-primary btn-sm">Apply Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Python Developer</h5>
+            <p class="card-text">Location: Delhi<br>Experience: 1+ years</p>
+            <a href="#apply" class="btn btn-primary btn-sm">Apply Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title">Django Intern</h5>
+            <p class="card-text">Location: Remote<br>Duration: 3-6 months</p>
+            <a href="#apply" class="btn btn-primary btn-sm">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apply" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Apply for a Position</h2>
+    <form method="POST" action="{% url 'career_apply' %}">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" name="position" class="form-control" placeholder="Position Applying For" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" name="location" class="form-control" placeholder="Preferred Location" required>
+        </div>
+        <div class="col-12 mb-3">
+          <textarea name="message" class="form-control" rows="4" placeholder="Cover Letter / Message" required></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-success">Submit Application</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+{% endblock %}

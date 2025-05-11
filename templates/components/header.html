@@ -1,42 +1,56 @@
 {% load static %}
 
+<!-- Ribbon Section with Additional Content -->
+
 <div class="ribbon-container">
   <div class="d-none d-xl-block bg-mongoose py-1 position-relative z-index-2">
 
     <div class="container">
         <div class="d-flex align-items-center">
+            <!-- Contact Info -->
             <ul class="nav mx-n3 line-height-one font-montserrat">
                 <li class="nav-item px-3">
-                    <span class="font-size-xs text-white">(+91) 8750695256</span>
+                    <span class="font-size-xs text-white">(+91) 8447242558</span>
                 </li>
                 <li class="nav-item px-3">
-                    <span class="font-size-xs text-white">seekhocomputer.com</span>
+                    <span class="font-size-xs text-white">seekhocoding.com</span>
                 </li>
             </ul>
 
+            <!-- Centered Marquee for Google Form -->
+            <div class="marquee-container flex-grow-1 mx-4">
+                <div class="marquee-content">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScXXXXXXXXXXXXXXX/viewform" target="_blank" class="text-white text-decoration-none font-montserrat font-size-xs">
+                        📣 Register now for our FREE workshop — Limited seats only!
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
             <ul class="nav ms-auto me-n3 font-size-sm">
                 <li class="nav-item px-3">
-                    <a href=https://www.facebook.com/profile.php?id=100090619387521">
+                    <a href="https://www.facebook.com/..." class="nav-link p-0 text-white">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </li>
                 <li class="nav-item px-3">
-                    <a href="https://www.youtube.com/channel/UCGyTjPYIOWsoVX2QXxKvg6g
-                    ">
+                    <a href="https://www.youtube.com/channel/..." class="nav-link p-0 text-white">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </li>
                 <li class="nav-item px-3">
-                    <a href="https://instagram.com/seekhocomputer?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" class="nav-link p-0 text-white">
+                    <a href="https://www.instagram.com/..." class="nav-link p-0 text-white">
                         <i class="fab fa-instagram">/</i>
                     </a>
                 </li>
                 <li class="nav-item px-3">
-                    <a href="https://www.linkedin.com/company/seekho-coding/?viewAsMember=true" class="nav-link p-0 text-white">
+                    <a href="https://www.linkedin.com/..." class="nav-link p-0 text-white">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </li>
             </ul>
+
+            <!-- Language Selector -->
             <div class="ms-5">
                 <select class="custom-select custom-select-xs text-white custom-select-white font-montserrat bg-transparent border-0 font-size-xs" data-choices>
                     <option>English</option>
@@ -46,14 +60,166 @@
             </div>
         </div>
     </div>
+  </div>
 </div>
+
+<!-- Marquee CSS -->
+<style>
+  .marquee-container {
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 12s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+
+
+<!-- Modal for Workshop Registration -->
+<div id="workshopModal" class="modal-overlay">
+  <div class="modal-content">
+    <h5>Join Our Free Workshop 🎓</h5>
+    <p>Watch the intro and register now!</p>
+
+    <!-- Embedded YouTube Intro Video -->
+    <div class="video-container">
+      <iframe width="100%" height="215" src="https://youtu.be/YKZv-MDLEb8?si=ge76tg2lLx4Xh0sx" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Registration Button -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbrQrlj9yzbVf8tI90rNI1JQOC91kpWqFJqcZbNNsb4MppXw/viewform?usp=header" class="register-button" target="_blank">Register Now</a>
+    <button class="close-modal">&times;</button>
+  </div>
+</div>
+
+<!-- Modal Styling -->
+<style>
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .modal-content h5 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #b6893c;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    margin-bottom: 20px;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 8px;
+  }
+
+  .register-button {
+    padding: 10px 25px;
+    background-color: #b6893c;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 10px; right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
+<!-- Modal JavaScript -->
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('workshopModal');
+    const closeBtn = modal.querySelector('.close-modal');
+
+    // Show only if not already shown before
+    if (!localStorage.getItem('workshopModalShown')) {
+      modal.style.display = 'flex';
+    }
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      // Mark as shown
+      localStorage.setItem('workshopModalShown', 'true');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        localStorage.setItem('workshopModalShown', 'true');
+      }
+    });
+  });
+</script>
+  
+
+</script>
+
 
 <header class="navbar navbar-expand-xl navbar-light" >
         <div class="container">
 
             <!-- Brand -->
             <a class="navbar-brand" href="#">
-                <img src="{% static 'assets/img/seekho.png' %}" class="navbar-brand-img" alt="home.html">
+                <img src="{% static 'assets/img/brand.png' %}" class="navbar-brand-img" alt="home.html">
             </a>
 
             <!-- Vertical Menu -->
@@ -135,6 +301,20 @@
                         </a>
 
                     </li>
+                <!--Rahul Career page-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-gigas" href="#career" role="button" data-toggle="dropdown" aria-expanded="false">
+                      <span style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                        -1px 1px 0 #000, 1px 1px 0 #000; font-weight: bold;">
+                        Careers
+                      </span>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#career">Open Positions</a>
+                      <a class="dropdown-item" href="#apply">Apply Now</a>
+                    </div>
+                  </li>
+
                     <li class="nav-item dropdown dropdown-full-width">
                         <a class="nav-link text-gigas"  href="{% url 'contact_us'%}">
                             <span style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-weight: bold;">Contact Us</span>
