@@ -14,7 +14,8 @@ SECRET_KEY = 'django-insecure-q9i1dpdj0o&2&7(c8bs53gfpogj4_$1*3tu(yo*c!b@2lts5vm
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["www.seekhocoding.com", "seekhocoding.com", "127.0.0.1:8000", "localhost"]
+
 
 # Application definition
 
@@ -110,7 +111,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
 
-<<<<<<< HEAD
+
 
 # Email config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -125,14 +126,6 @@ EMAIL_HOST_PASSWORD = 'Seekho@340'  # 🔐 use App Password, not Gmail login
 # Razorpay credentials
 RAZORPAY_KEY_ID='rzp_test_MagEsW5sfcB3g5' 
 RAZORPAY_KEY_SECRET='0fbsbSBRdxLH1NtiUWfvCKJI'
-
-=======
-# Email config
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'seekho8coding@gmail.com'
-EMAIL_HOST_PASSWORD = 'Seekho@340'  # Use environment variable in production
 
 # Razorpay credentials
 KEY_ID = 'rzp_test_MagEsW5sfcB3g5'
