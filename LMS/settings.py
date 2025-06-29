@@ -14,8 +14,7 @@ SECRET_KEY = 'django-insecure-q9i1dpdj0o&2&7(c8bs53gfpogj4_$1*3tu(yo*c!b@2lts5vm
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["www.seekhocoding.com", "seekhocoding.com", "127.0.0.1:8000", "localhost"]
-
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -112,7 +111,6 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
 
 
-
 # Email config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
@@ -126,11 +124,6 @@ EMAIL_HOST_PASSWORD = 'Seekho@340'  # 🔐 use App Password, not Gmail login
 # Razorpay credentials
 RAZORPAY_KEY_ID='rzp_test_MagEsW5sfcB3g5' 
 RAZORPAY_KEY_SECRET='0fbsbSBRdxLH1NtiUWfvCKJI'
-
-# Razorpay credentials
-KEY_ID = 'rzp_test_MagEsW5sfcB3g5'
-KEY_SECRET = '0fbsbSBRdxLH1NtiUWfvCKJI'
-
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [

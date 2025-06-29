@@ -29,7 +29,6 @@
 <div class="container mb-11">
     <div class="row gx-0">
         <div class="col-md-7 col-xl-4 mx-auto">
-<<<<<<< HEAD
             
             <!-- Page Title -->
             <h3 class="mb-6">Log In to Your Account!</h3>
@@ -45,41 +44,23 @@
             {% endif %}
 
             <!-- Login Form -->
-=======
-            <h3 class="mb-6">Log In to Your Account!</h3>
-
-            {% include 'components/msg.html' %}
-
->>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
             <form method="post" action="{% url 'doLogin' %}" class="mb-5">
                 {% csrf_token %}
 
                 <!-- Email -->
-<<<<<<< HEAD
                 <div class="form-group mb-4">
-=======
-                <div class="form-group mb-5">
->>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
                     <label for="modalSigninEmail1">Email</label>
                     <input 
                         type="email" 
                         class="form-control" 
                         id="modalSigninEmail1" 
                         name="email" 
-<<<<<<< HEAD
                         placeholder="you@example.com" 
-=======
-                        placeholder="your@email.com" 
->>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
                         required>
                 </div>
 
                 <!-- Password -->
-<<<<<<< HEAD
                 <div class="form-group mb-4">
-=======
-                <div class="form-group mb-5">
->>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
                     <label for="modalSigninPassword1">Password</label>
                     <input 
                         type="password" 
@@ -91,7 +72,6 @@
                 </div>
 
                 <!-- Remember Me & Forgot Password -->
-<<<<<<< HEAD
                 <div class="d-flex align-items-center justify-content-between mb-4 font-size-sm">
                     <div class="form-check">
                         <input 
@@ -104,38 +84,16 @@
                     </div>
                     <div>
                         <a class="text-decoration-underline" href="{% url 'password_reset' %}">Forgot Password?</a>
-=======
-                <div class="d-flex align-items-center mb-5 font-size-sm">
-                    <div class="form-check">
-                        <input 
-                            class="form-check-input text-gray-800" 
-                            type="checkbox" 
-                            id="rememberMe">
-                        <label class="form-check-label text-gray-800" for="rememberMe">
-                            Remember me
-                        </label>
-                    </div>
-                    <div class="ms-auto">
-                        <a class="text-gray-800" href="{% url 'password_reset' %}">Forgot Password?</a>
->>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
                     </div>
                 </div>
 
                 <!-- Submit -->
-<<<<<<< HEAD
                 <button type="submit" class="btn btn-primary btn-block">
-=======
-                <button class="btn btn-block btn-primary" type="submit">
->>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
                     LOGIN
                 </button>
             </form>
 
-<<<<<<< HEAD
             <!-- Signup Redirect -->
-=======
-            <!-- Signup Link -->
->>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
             <p class="mb-0 font-size-sm text-center">
                 Don't have an account? 
                 <a class="text-underline" href="{% url 'register' %}">Sign up</a>
@@ -144,8 +102,5 @@
     </div>
 </div>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
 {% endblock %}
