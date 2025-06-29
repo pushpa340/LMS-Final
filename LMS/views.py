@@ -21,18 +21,17 @@ from django.views.decorators.csrf import csrf_exempt
 from .settings import *
 
 import razorpay
+
 from time import time
 import logging
 
 # Create a logger
 logger = logging.getLogger(__name__)
 
-
-client = razorpay.Client(auth=(KEY_ID, KEY_SECRET))
+client = razorpay.Client(auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET))
 
 def BASE(request):
     return render(request,'base.html')
-
 
 def HOME(request):
     # Fetch all Categories from the database and order them by 'id'
@@ -50,8 +49,6 @@ def HOME(request):
     # Render the 'main/home.html' template with the context data and return the response
     return render(request, 'main/home.html', context)
 
-
-
 def HOME(request):
     category= Categories.objects.all()
     course = Course.objects.filter(status ='PUBLISH')
@@ -62,7 +59,6 @@ def HOME(request):
     }
     return render(request,'main/home.html',context)
  
-
 def SINGLE_COURSE(request):
     category = Categories.get_all_category(Categories)
     level = Level.objects.all()
@@ -135,7 +131,6 @@ def SEARCH_COURSE(request):
         'category':category
     }
     return render(request, 'search/search.html',context)
-
 
 def COURSE_DETAILS(request, slug):
     category = Categories.get_all_category(Categories)
@@ -251,8 +246,7 @@ def MY_COURSE(request):
     }
     return render(request,'course/my_course.html',context)
 
-
-
+'''
 @csrf_exempt
 def VERIFY_PAYMENT(request):
     if request.method == "POST":
@@ -282,7 +276,7 @@ def VERIFY_PAYMENT(request):
             return render(request,'verify_payment/success.html',context)
         except:
             return render(request,'verify_payment/fail.html')
-
+'''
 def WATCH_COURSE(request, slug):
     course = Course.objects.filter(slug = slug)
     lecture=request.GET.get('lecture')
@@ -296,6 +290,68 @@ def WATCH_COURSE(request, slug):
         'video' : video,
     }
     return render(request,'course/watch-course.html',context)
+
+def career_apply(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        position = request.POST.get('position')
+        location = request.POST.get('location')
+        message = request.POST.get('message')
+        
+        # Here you could save to the database or send an email
+        print(f"Application received from {name} for {position}")
+        
+        messages.success(request, 'Application submitted successfully!')
+        return redirect('home')
+    return redirect('home')
+
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
+def VERIFY_PAYMENT(request):
+    if request.method == "POST":
+        data = request.POST
+
+        try:
+            # 1. Verify the signature using Razorpay SDK
+            params_dict = {
+                'razorpay_order_id': data['razorpay_order_id'],
+                'razorpay_payment_id': data['razorpay_payment_id'],
+                'razorpay_signature': data['razorpay_signature']
+            }
+
+            client.utility.verify_payment_signature(params_dict)
+
+            # 2. Fetch payment record
+            razorpay_order_id = data['razorpay_order_id']
+            razorpay_payment_id = data['razorpay_payment_id']
+
+            payment = Payment.objects.get(order_id=razorpay_order_id)
+            payment.payment_id = razorpay_payment_id
+            payment.status = True
+
+            # 3. Create user course record
+            user_course = UserCourse.objects.create(
+                user=payment.user,
+                course=payment.course,
+            )
+
+            payment.user_course = user_course
+            payment.save()
+
+            context = {
+                'data': data,
+                'payment': payment,
+            }
+
+            return render(request, 'verify_payment/success.html', context)
+
+        except Exception as e:
+            print("❌ Payment verification failed:", e)
+            return render(request, 'verify_payment/fail.html')
+
+    return render(request, 'verify_payment/fail.html')
 
 def custom_csrf_failure_view(request,reason=""):
     return HttpResponseForbidden("Custom CSRF validation failed. Please try again.")

@@ -8,107 +8,105 @@
 
     <!-- HERO
     ================================================== -->
-    <section class="mt-n13">
-        <div class="flickity-page-dots-vertical flickity-page-dots-white position-static flickity-button-outline button-same-position" data-flickity='{"pageDots": true, "prevNextButtons": true, "cellAlign": "center", "wrapAround": true, "imagesLoaded": true}'>
-            <div class="w-100">
-                <div class="vh-100 bg-cover position-relative overlay overlay-custom-blue" style="background-image: url(static/assets/img/covers/cover-1.jpeg)">
-                    <div class="container position-static">
-                        <div class="vh-100 row gx-0">
-                            <div class="col-lg-6 my-auto" style="z-index:1;">
-                                <!-- Heading -->
-                                <h1 class="display-5 fw-medium text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
-                                    <span class="fw-bold">The Best Coding</span> <span class="d-block">Learning Platform</span>
-                                </h1>
+    
+    <section class="mt-n10">
+            <div class="flickity-page-dots-vertical flickity-page-dots-white position-static flickity-button-outline button-same-position"
+                data-flickity='{
+                    "pageDots": true,
+                    "prevNextButtons": true,
+                    "cellAlign": "center",
+                    "wrapAround": true,
+                    "imagesLoaded": true,
+                    "autoPlay": 3000, 
+                    "pauseAutoPlayOnHover": false
+                }'>
+                <div class="w-100">
+                    <div class="vh-80 bg-cover position-relative" style="height: 80vh; background-image: url(static/assets/img/covers/cover-1.png)">
+                    <div class="container position-static h-100">
+                        <div class="vh-100 row gx-0 h-100">
+                                <div class="col-lg-12 position-absolute bottom-0 start-50 translate-middle-x mb-5 text-center z-2">
+                                    <!-- Get Started Button -->
+                                    <a href="{% url 'single_course' %}" 
+                                        class="btn btn-tangerine btn-wide rounded-lg me-3 text-w" 
+                                        data-aos="fade-up" data-aos-duration="200">
+                                        GET STARTED
+                                    </a>
 
-                                <!-- Text -->
-                                <p class="font-montserrat text-capitalize mb-5 text-white me-xl-12 line-height-md" data-aos="fade-up" data-aos-duration="200">
-                                    Unlocking Creativity Through Code: Your Journey to Innovative Solutions
-                                </p>
-
-                                <!-- Buttons -->
-                                <a href="{%  url 'single_course' %}"  class="btn btn-tangerine btn-wide rounded-lg mb-4 mb-md-0 me-md-5 text-w" data-aos="fade-up" data-aos-duration="200">GET STARTED</a>
+                                    <!-- Start Demo Button (Blue Background, White Text) -->
+                                    <a href="https://youtu.be/99lLLazTv_0?si=yqlqb7RyLnA--KoH" target="_blank" 
+                                        class="btn btn-blue btn-wide rounded-lg text-w" 
+                                        data-aos="fade-up" data-aos-duration="300">
+                                        START DEMO
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="w-100">
-                <div class="vh-100 bg-cover position-relative overlay overlay-custom-blue" style="background-image: url(static/assets/img/covers/cover-3.jpg)">
-                    <div class="container position-static">
-                        <div class="vh-100 row gx-0">
-                            <div class="col-lg-6 my-auto" style="z-index:1;">
-                                <!-- Heading -->
-                                <h1 class="display-5 fw-medium text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
-                                    <span class="fw-bold">Learn From Anywhere</span> <span class="d-block">All Courses Available</span>
-                                </h1>
+                <div class="w-100">
+                    <div class="vh-80 bg-cover position-relative" style="height: 80vh; background-image: url(static/assets/img/covers/cover-3.png)">
+                    <div class="container position-static h-100">
+                        <div class="vh-100 row gx-0 h-100">
+                                <div class="col-lg-12 position-absolute bottom-0 start-50 translate-middle-x mb-5 text-center z-2">
+                                    <!-- Get Started Button -->
+                                    <a href="{% url 'single_course' %}" 
+                                        class="btn btn-tangerine btn-wide rounded-lg me-3 text-w" 
+                                        data-aos="fade-up" data-aos-duration="200">
+                                        GET STARTED
+                                    </a>
 
-                                <!-- Text -->
-                                <p class="font-montserrat text-capitalize mb-5 text-white me-xl-12 line-height-md" data-aos="fade-up" data-aos-duration="200">
-                                    VirtualLearn: Empowering Minds, Bridging Distances
-                                </p>
-
-                                <!-- Buttons -->
- 
-                                <a href="{%  url 'single_course' %}" class="btn btn-gigas btn-wide rounded-lg d-none d-lg-inline-block" data-aos="fade-up" data-aos-duration="200">VIEW COURSES</a>
+                                    <!-- Start Demo Button (Blue Background, White Text) -->
+                                    <a href="https://youtu.be/99lLLazTv_0?si=yqlqb7RyLnA--KoH" target="_blank" 
+                                        class="btn btn-blue btn-wide rounded-lg text-w" 
+                                        data-aos="fade-up" data-aos-duration="300">
+                                        START DEMO
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="w-100">
-                <div class="vh-100 bg-cover position-relative overlay overlay-custom-blue" style="background-image: url(static/assets/img/covers/cover-4.jpg)">
-                    <div class="container position-static">
-                        <div class="vh-100 row gx-0">
-                            <div class="col-lg-6 my-auto" style="z-index:1;">
-                                <!-- Heading -->
-                                <h1 class="display-5 fw-medium text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
-                                    <span class="fw-bold">We will help you to </span> <span class="d-block"> Get Started!</span>
-                                </h1>
+                <div class="w-100">
+                    <div class="vh-80 bg-cover position-relative" style="height: 80vh; background-image: url(static/assets/img/covers/cover-4.png)">
+                    <div class="container position-static h-100">
+                        <div class="vh-100 row gx-0 h-100">
+                                <div class="col-lg-12 position-absolute bottom-0 start-50 translate-middle-x mb-5 text-center z-2">
+                                    <!-- Get Started Button -->
+                                    <a href="{% url 'single_course' %}" 
+                                        class="btn btn-tangerine btn-wide rounded-lg me-3 text-w" 
+                                        data-aos="fade-up" data-aos-duration="200">
+                                        GET STARTED
+                                    </a>
 
-                                <!-- Text -->
-                                <p class="font-montserrat text-capitalize mb-5 text-white me-xl-12 line-height-md" data-aos="fade-up" data-aos-duration="200">
-                                    Shaping Futures: Nurturing Your Child's  Coding Career Path
-                                </p>
-
-                                <!-- Buttons -->
-                                <a href="{%  url 'single_course' %}"  class="btn btn-tangerine btn-wide rounded-lg mb-4 mb-md-0 me-md-5 text-w" data-aos="fade-up" data-aos-duration="200">GET STARTED</a>
-
+                                    <!-- Start Demo Button (Blue Background, White Text) -->
+                                    <a href="https://youtu.be/99lLLazTv_0?si=yqlqb7RyLnA--KoH" target="_blank" 
+                                        class="btn btn-blue btn-wide rounded-lg text-w" 
+                                        data-aos="fade-up" data-aos-duration="300">
+                                        START DEMO
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
         </div>
     </section>
 
-   <!-- FEATURES
-    ================================================== -->
-    <section class="py-8 py-lg-0 mt-lg-n10 mt-xl-n13 z-index-0 position-relative">
+<!-- FEATURES  Iconns Bottum to Home page  ================================================== -->
+ 
+    <section class="py-2 py-lg-1 mt-lg-n4 mt-xl-n30  z-index-0 position-relative">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-lg-4 mb-6 mb-lg-0">
+                <div class="col-md-6 col-lg-4 mb-2 mb-lg-0">
                     <!-- Card -->
-                    <a href="#" class="card px-6 py-5 px-md-7 py-md-6 shadow lift bg-mongoose">
-                        <div class="mb-4 text-white icon-45">
-                            <!-- Icon -->
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M35.416 40H6.24935C3.72102 40 1.66602 37.945 1.66602 35.4167V4.58333C1.66602 2.055 3.72102 0 6.24935 0H32.0827C32.7727 0 33.3327 0.56 33.3327 1.25V6.66667H35.416C36.106 6.66667 36.666 7.22667 36.666 7.91667V38.75C36.666 39.44 36.106 40 35.416 40ZM4.16602 8.665V35.4167C4.16602 36.565 5.10102 37.5 6.24935 37.5H34.166V9.16667H6.24935C5.49935 9.16667 4.79102 8.98667 4.16602 8.665ZM6.24935 2.5C5.10102 2.5 4.16602 3.435 4.16602 4.58333C4.16602 5.73167 5.10102 6.66667 6.24935 6.66667H30.8327V2.5H6.24935Z" fill="currentColor"/>
-                                <path d="M20.4173 31.6665C20.189 31.6665 19.964 31.6048 19.7606 31.4815L15.0006 28.5515L10.2407 31.4815C9.85398 31.7198 9.37232 31.7282 8.97398 31.5082C8.57732 31.2865 8.33398 30.8682 8.33398 30.4165V7.9165H10.834V28.1798L14.344 26.0198C14.7473 25.7732 15.2523 25.7732 15.6556 26.0198L19.1656 28.1798V7.9165H21.6673V30.4165C21.6673 30.8682 21.424 31.2865 21.0273 31.5082C20.8373 31.6132 20.6273 31.6665 20.4173 31.6665Z" fill="currentColor"/>
-                            </svg>
-
-                        </div>
-
-                        <h2 class="font-size-xxl text-white font-lora mb-5 fw-bold">Earn certifications</h2>
-
-                        <p class="font-montserrat text-capitalize line-clamp-3 mb-7 text-white font-size-sm line-height-md">Upon course completion, you gain knowledge, skills, and potentially certifications. </p>
-
+                    <a href="#" class="card p-3 shadow lift bg-mongoose">
+                        <h5 class="font-size-xxl text-white font-lora mb-5 fw-bold">Earn certifications</h5>
                         <div class="d-flex align-items-center text-white mb-1">
                             <span class="me-3 fw-medium">Read More</span>
                             <!-- Icon -->
-                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="#">
                                 <path d="M7.7779 4.6098L3.32777 0.159755C3.22485 0.0567475 3.08745 0 2.94095 0C2.79445 0 2.65705 0.0567475 2.55412 0.159755L2.2264 0.487394C2.01315 0.700889 2.01315 1.04788 2.2264 1.26105L5.96328 4.99793L2.22225 8.73895C2.11933 8.84196 2.0625 8.97928 2.0625 9.1257C2.0625 9.27228 2.11933 9.4096 2.22225 9.51269L2.54998 9.84025C2.65298 9.94325 2.7903 10 2.9368 10C3.0833 10 3.2207 9.94325 3.32363 9.84025L7.7779 5.38614C7.88107 5.2828 7.93774 5.14484 7.93741 4.99817C7.93774 4.85094 7.88107 4.71305 7.7779 4.6098Z" fill="currentColor"/>
                             </svg>
 
@@ -118,55 +116,24 @@
 
                 <div class="col-md-6 col-lg-4 mb-6 mb-lg-0">
                     <!-- Card -->
-                    <a href="#" class="card px-6 py-5 px-md-7 py-md-6 shadow lift">
-                        <div class="mb-4 text-biscay icon-45">
-                            <!-- Icon -->
-                            <svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.5292 21.3608C24.1425 21.3608 25.4549 20.0484 25.4549 18.435C25.4549 16.8218 24.1425 15.5093 22.5292 15.5093C20.916 15.5093 19.6035 16.8218 19.6035 18.435C19.6035 20.0484 20.916 21.3608 22.5292 21.3608ZM22.5292 17.2672C23.1732 17.2672 23.6971 17.7911 23.6971 18.435C23.6971 19.079 23.1732 19.603 22.5292 19.603C21.8853 19.603 21.3613 19.0791 21.3613 18.435C21.3613 17.791 21.8852 17.2672 22.5292 17.2672Z" fill="currentColor"/>
-                                <path d="M44.1211 43.2422H41.359V29.6367H44.0908C44.4383 29.6367 44.7532 29.4319 44.8942 29.1143C45.0352 28.7967 44.9757 28.4258 44.7425 28.1681L40.0994 23.0367C39.9328 22.8525 39.696 22.7474 39.4477 22.7474H35.0561V18.0027H36.0644C36.5498 18.0027 36.9433 17.6092 36.9433 17.1238V13.6978C36.9433 13.2123 36.5498 12.8188 36.0644 12.8188H31.8015L23.3933 6.99161V5.69566H27.8975C28.3829 5.69566 28.7764 5.30218 28.7764 4.81676V0.878906C28.7764 0.393486 28.3829 0 27.8975 0H22.5143C22.0289 0 21.6354 0.393486 21.6354 0.878906V6.99161L13.2274 12.8189H8.7598C8.27437 12.8189 7.88089 13.2124 7.88089 13.6978V17.1239C7.88089 17.6093 8.27437 18.0028 8.7598 18.0028H9.97269V22.7475H5.60988C5.3615 22.7475 5.12481 22.8525 4.95817 23.0367L0.315088 28.1681C0.0819141 28.4258 0.0225 28.7966 0.163389 29.1143C0.304365 29.4319 0.619277 29.6367 0.966797 29.6367H3.69861V43.2422H0.878906C0.393486 43.2422 0 43.6357 0 44.1211C0 44.6065 0.393486 45 0.878906 45H44.1211C44.6064 45 45 44.6065 45 44.1211C45 43.6357 44.6064 43.2422 44.1211 43.2422ZM42.1102 27.8789H31.7655V24.5053H39.0577L42.1102 27.8789ZM31.7655 33.6109H34.8044V36.6498H31.7655V33.6109ZM27.0186 3.93785H23.3933V1.75781H27.0186V3.93785ZM9.6387 14.5767H13.5022C13.6811 14.5767 13.8558 14.5221 14.0028 14.4201L22.5143 8.52117L31.0259 14.4201C31.173 14.5221 31.3476 14.5767 31.5265 14.5767H35.1854V16.2449H30.1731L23.02 11.2121C22.7167 10.9986 22.3119 10.9986 22.0085 11.2121L14.8554 16.2449H9.63853V14.5767H9.6387ZM5.99994 24.5053H13.2921V27.8789H2.94741L5.99994 24.5053ZM13.2921 36.6498H10.2531V33.6109H13.2921V36.6498ZM5.45643 29.6367H13.2921V31.8531H9.37424C8.88882 31.8531 8.49533 32.2465 8.49533 32.732V37.5287C8.49533 38.0141 8.88882 38.4076 9.37424 38.4076H13.2921V43.2422H5.45643V29.6367ZM15.0499 24.5053H18.6775C19.1629 24.5053 19.5564 24.1118 19.5564 23.6264C19.5564 23.141 19.1629 22.7475 18.6775 22.7475H11.7304V18.0028H15.1337C15.3148 18.0028 15.4914 17.9469 15.6394 17.8428L22.5142 13.0057L29.3891 17.8428C29.5372 17.9469 29.7138 18.0028 29.8949 18.0028H33.2982V22.7475H26.4185C25.9332 22.7475 25.5396 23.141 25.5396 23.6264C25.5396 24.1118 25.9332 24.5053 26.4185 24.5053H30.0076V43.2422H27.2089V34.0658C27.2089 31.604 25.2061 29.6012 22.7442 29.6012C20.2824 29.6012 18.2797 31.6041 18.2797 34.0658V43.2422H15.0498V24.5053H15.0499ZM20.0376 43.2422V34.0658C20.0376 32.5732 21.2518 31.359 22.7443 31.359C24.2369 31.359 25.4512 32.5732 25.4512 34.0658V43.2422H20.0376ZM31.7655 43.2422V38.4076H35.6833C36.1687 38.4076 36.5622 38.0141 36.5622 37.5287V32.732C36.5622 32.2465 36.1687 31.8531 35.6833 31.8531H31.7655V29.6367H39.6011V43.2422H31.7655Z" fill="currentColor"/>
-                                <path d="M23.3395 23.2902C23.0377 22.5658 21.9671 22.5879 21.7007 23.3302C21.5743 23.6822 21.6918 24.09 21.9878 24.3192C22.2741 24.5409 22.6738 24.5648 22.9837 24.3776C23.3496 24.1566 23.504 23.685 23.3395 23.2902Z" fill="currentColor"/>
-                            </svg>
+                    <a href="#" class="card p-3 shadow lift">
 
-                        </div>
-
-                        <h2 class="font-size-xxl font-lora mb-5 fw-bold text-biscay">Learning Institution </h2>
-
-                        <p class="font-montserrat text-capitalize line-clamp-3 mb-7 font-size-sm line-height-md">Locate your nearby learning institutions and know about the learning environment</p>
-
+                        <h5 class="font-size-xxl font-lora mb-5 fw-bold text-biscay">Learn From Experts </h5>
                         <div class="d-flex align-items-center mb-1 text-mongoose">
                             <span class="me-3 fw-medium">Read More</span>
                             <!-- Icon -->
                             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.7779 4.6098L3.32777 0.159755C3.22485 0.0567475 3.08745 0 2.94095 0C2.79445 0 2.65705 0.0567475 2.55412 0.159755L2.2264 0.487394C2.01315 0.700889 2.01315 1.04788 2.2264 1.26105L5.96328 4.99793L2.22225 8.73895C2.11933 8.84196 2.0625 8.97928 2.0625 9.1257C2.0625 9.27228 2.11933 9.4096 2.22225 9.51269L2.54998 9.84025C2.65298 9.94325 2.7903 10 2.9368 10C3.0833 10 3.2207 9.94325 3.32363 9.84025L7.7779 5.38614C7.88107 5.2828 7.93774 5.14484 7.93741 4.99817C7.93774 4.85094 7.88107 4.71305 7.7779 4.6098Z" fill="currentColor"/>
                             </svg>
-
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-6 col-lg-4 mb-6 mb-lg-0">
                     <!-- Card -->
-                    <a href="#" class="card px-6 py-5 px-md-7 py-md-6 shadow lift bg-biscay">
-                        <div class="mb-4 text-white icon-45">
-                            <!-- Icon -->
-                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M36.3177 5.02078H29.9584V1.17188C29.9584 0.524687 29.4337 0 28.7865 0H1.17188C0.524687 0 0 0.524687 0 1.17188V33.8073C0 37.222 2.77805 40 6.19273 40C6.19273 40 25.6601 40.0001 33.8073 40.0001C37.2274 40 40 37.2274 40 33.8073V8.70305C40 6.67266 38.3481 5.02078 36.3177 5.02078ZM32.8852 7.36453C32.7212 7.78547 32.6355 8.23766 32.6355 8.70312V12.5521H29.9584V7.36461H32.8852V7.36453ZM6.19273 37.6562C4.07039 37.6562 2.34375 35.9296 2.34375 33.8073V2.34375H27.6146V33.8073C27.6146 35.2623 28.1177 36.5992 28.9578 37.6562H6.19273ZM37.6562 33.8073C37.6562 35.933 35.933 37.6562 33.8073 37.6562C32.0902 37.6562 30.6363 36.5317 30.1405 34.9791H33.8073C34.4545 34.9791 34.9791 34.4545 34.9791 33.8073C34.9791 33.1601 34.4545 32.6354 33.8073 32.6354H29.9583V29.9583H33.8073C34.4545 29.9583 34.9791 29.4336 34.9791 28.7864C34.9791 28.1392 34.4545 27.6145 33.8073 27.6145H29.9583V24.9374H33.8073C34.4545 24.9374 34.9791 24.4127 34.9791 23.7655C34.9791 23.1184 34.4545 22.5937 33.8073 22.5937H29.9583V19.9166H33.8073C34.4545 19.9166 34.9791 19.3919 34.9791 18.7447C34.9791 18.0975 34.4545 17.5728 33.8073 17.5728H29.9583V14.8957H33.8073C34.4545 14.8957 34.9791 14.371 34.9791 13.7238V8.70312C34.9791 7.97195 35.5703 7.36453 36.3177 7.36453C37.0557 7.36453 37.6562 7.96508 37.6562 8.70312V33.8073H37.6562Z" fill="currentColor"/>
-                                <path d="M23.7643 5.02081H6.19141C5.54422 5.02081 5.01953 5.5455 5.01953 6.19269C5.01953 6.83988 5.54422 7.36456 6.19141 7.36456H23.7643C24.4115 7.36456 24.9362 6.83988 24.9362 6.19269C24.9362 5.5455 24.4115 5.02081 23.7643 5.02081Z" fill="currentColor"/>
-                                <path d="M23.7663 22.5937H17.4902C16.843 22.5937 16.3184 23.1184 16.3184 23.7656C16.3184 24.4128 16.843 24.9374 17.4902 24.9374H23.7663C24.4134 24.9374 24.9381 24.4128 24.9381 23.7656C24.9381 23.1184 24.4134 22.5937 23.7663 22.5937Z" fill="currentColor"/>
-                                <path d="M12.4674 22.5937H6.19141C5.54422 22.5937 5.01953 23.1184 5.01953 23.7656C5.01953 24.4128 5.54422 24.9374 6.19141 24.9374H12.4674C13.1146 24.9374 13.6393 24.4128 13.6393 23.7656C13.6393 23.1184 13.1146 22.5937 12.4674 22.5937Z" fill="currentColor"/>
-                                <path d="M23.7663 32.6354H17.4902C16.843 32.6354 16.3184 33.1601 16.3184 33.8073C16.3184 34.4544 16.843 34.9791 17.4902 34.9791H23.7663C24.4134 34.9791 24.9381 34.4544 24.9381 33.8073C24.9381 33.1601 24.4134 32.6354 23.7663 32.6354Z" fill="currentColor"/>
-                                <path d="M12.4674 32.6354H6.19141C5.54422 32.6354 5.01953 33.1601 5.01953 33.8073C5.01953 34.4544 5.54422 34.9791 6.19141 34.9791H12.4674C13.1146 34.9791 13.6393 34.4544 13.6393 33.8073C13.6393 33.1601 13.1146 32.6354 12.4674 32.6354Z" fill="currentColor"/>
-                                <path d="M23.7663 27.6145H17.4902C16.843 27.6145 16.3184 28.1392 16.3184 28.7864C16.3184 29.4336 16.843 29.9583 17.4902 29.9583H23.7663C24.4134 29.9583 24.9381 29.4336 24.9381 28.7864C24.9381 28.1392 24.4134 27.6145 23.7663 27.6145Z" fill="currentColor"/>
-                                <path d="M12.4674 27.6145H6.19141C5.54422 27.6145 5.01953 28.1392 5.01953 28.7864C5.01953 29.4336 5.54422 29.9583 6.19141 29.9583H12.4674C13.1146 29.9583 13.6393 29.4336 13.6393 28.7864C13.6393 28.1392 13.1146 27.6145 12.4674 27.6145Z" fill="currentColor"/>
-                                <path d="M23.7643 10.0416H6.19141C5.54422 10.0416 5.01953 10.5663 5.01953 11.2134V18.7447C5.01953 19.3919 5.54422 19.9166 6.19141 19.9166H23.7643C24.4115 19.9166 24.9362 19.3919 24.9362 18.7447V11.2134C24.9362 10.5663 24.4115 10.0416 23.7643 10.0416ZM22.5924 17.5729H7.36328V12.3854H22.5924V17.5729Z" fill="currentColor"/>
-                            </svg>
+                    <a href="#" class="card p-3 shadow lift bg-biscay">
 
-                        </div>
-
-                        <h2 class="font-size-xxl text-white font-lora mb-5 fw-bold">Latest Blogs & News</h2>
-
-                        <p class="font-montserrat text-capitalize line-clamp-3 mb-7 text-white font-size-sm line-height-md">Explore AI tools and stay informed about the latest tech news and developments.</p>
-
+                        <h5 class="font-size-xxl text-white font-lora mb-5 fw-bold">Latest Courses & Blogs</h5>
                         <div class="d-flex align-items-center text-white mb-1">
                             <span class="me-3 fw-medium">Read More</span>
                             <!-- Icon -->
@@ -182,14 +149,19 @@
     </section>
 
 
-
    <!-- FEATURED PRODUCT
     ================================================== -->
-    <section class="pt-5 pb-9 py-md-11 bg-white">
+
+    <section class="mt-5 pt-4 pb-1 py-md-1 bg-white">
         <div class="container container-wd">
             <div class="row align-items-end mb-7">
                 <div class="col-xl mb-5 mb-xl-0">
-                    <h1 class="mb-1">Featured Courses</h1>
+
+                <h1 class="mb-1">
+                    <span style="background-color: #01162c; color: white; padding: 10px 20px; border-radius: 12px; display: inline-block;">
+                        Featured Courses
+                        </span>
+                        </h1>
                     <p class="font-size-lg text-capitalize mb-0">Discover your perfect program in our courses.</p>
                 </div>
                 <div class="col-xl-auto">
