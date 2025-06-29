@@ -138,7 +138,7 @@ EMAIL_HOST_PASSWORD = 'Seekho@340'  # Use environment variable in production
 KEY_ID = 'rzp_test_MagEsW5sfcB3g5'
 KEY_SECRET = '0fbsbSBRdxLH1NtiUWfvCKJI'
 
->>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
+
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     "https://api.razorpay.com",
