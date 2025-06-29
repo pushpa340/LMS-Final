@@ -291,6 +291,12 @@ def WATCH_COURSE(request, slug):
     }
     return render(request,'course/watch-course.html',context)
 
+<<<<<<< HEAD
+=======
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
+>>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
 def career_apply(request):
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -306,6 +312,7 @@ def career_apply(request):
         return redirect('home')
     return redirect('home')
 
+<<<<<<< HEAD
 from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
@@ -352,6 +359,9 @@ def VERIFY_PAYMENT(request):
             return render(request, 'verify_payment/fail.html')
 
     return render(request, 'verify_payment/fail.html')
+=======
+
+>>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
 
 def custom_csrf_failure_view(request,reason=""):
     return HttpResponseForbidden("Custom CSRF validation failed. Please try again.")

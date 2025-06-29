@@ -53,7 +53,16 @@ urlpatterns = [
     path('apply/', views.career_apply, name='career_apply'),
 
 ] + static(settings.MEDIA_URL,document_root =settings.MEDIA_ROOT)
+<<<<<<< HEAD
 
 #configure admin titile
 admin.site.site_header="Seekhocoding_Admin"
 admin.site.site_title="Learn Coding Courses "
+=======
+#urlpatterns +=staticfiles_urlpatterns()
+# rlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+#if settings.DEBUG:
+#    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> 783cc70565c82ad8f953959db75f2ac5b973748b
